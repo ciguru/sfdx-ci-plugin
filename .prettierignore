@@ -1,0 +1,8 @@
+.husky
+.idea
+.editorconfig
+.gitignore
+.prettierignore
+/dist
+package-lock.json
+LICENSE

@@ -1,0 +1,68 @@
+{
+  "name": "@ciguru/sfdx-ci-plugin",
+  "version": "1.0.0",
+  "description": "Plugin for SFDX CLI with CI Engine functionality to automate the Salesforce CRM development process.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepare": "husky install",
+    "format": "prettier --write source",
+    "build": "tsc",
+    "build:check": "tsc --noEmit",
+    "start": "env-cmd ts-node source/index.ts",
+    "lint": "eslint source",
+    "lint:fix": "eslint source --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ciguru/sfdx-ci-plugin"
+  },
+  "author": "Customertimes Software",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/ciguru/sfdx-ci-plugin/issues"
+  },
+  "homepage": "https://github.com/ciguru/sfdx-ci-plugin#readme",
+  "devDependencies": {
+    "@types/jest": "27.4.1",
+    "@salesforce/ts-types": "1.5.20",
+    "@typescript-eslint/eslint-plugin": "5.15.0",
+    "@typescript-eslint/parser": "5.15.0",
+    "@vercel/ncc": "0.33.3",
+    "env-cmd": "10.1.0",
+    "eslint": "8.10.0",
+    "husky": "7.0.4",
+    "jest": "27.5.1",
+    "lint-staged": "12.3.4",
+    "prettier": "2.5.1",
+    "ts-jest": "27.1.3",
+    "ts-node": "10.6.0",
+    "typescript": "4.6.2"
+  },
+  "dependencies": {
+    "@oclif/core": "1.6.1",
+    "@oclif/plugin-help": "5.1.12",
+    "@salesforce/command": "5.0.0",
+    "@salesforce/core": "2.35.3",
+    "@ciguru/sfdx-ci-engine": "1.0.0"
+  },
+  "oclif": {
+    "commands": "dist/commands",
+    "bin": "sfdx",
+    "topics": {
+      "ci": {
+        "description": "CT Software SFDX CI Engine"
+      }
+    },
+    "devPlugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "files": [
+    "dist",
+    "messages"
+  ]
+}

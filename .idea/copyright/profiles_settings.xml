@@ -1,0 +1,23 @@
+<component name="CopyrightManager">
+  <settings>
+    <module2copyright>
+      <element module="All" copyright="Customertimes Software" />
+    </module2copyright>
+    <LanguageOptions name="Apex">
+      <option name="fileTypeOverride" value="3" />
+      <option name="separateBefore" value="true" />
+    </LanguageOptions>
+    <LanguageOptions name="CSS">
+      <option name="fileTypeOverride" value="3" />
+      <option name="separateBefore" value="true" />
+    </LanguageOptions>
+    <LanguageOptions name="JavaScript">
+      <option name="fileTypeOverride" value="3" />
+      <option name="separateBefore" value="true" />
+    </LanguageOptions>
+    <LanguageOptions name="TypeScript">
+      <option name="fileTypeOverride" value="3" />
+      <option name="separateBefore" value="true" />
+    </LanguageOptions>
+  </settings>
+</component>
