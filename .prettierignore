@@ -2,6 +2,7 @@
 .idea
 .editorconfig
 .gitignore
+.npmignore
 .prettierignore
 /dist
 package-lock.json

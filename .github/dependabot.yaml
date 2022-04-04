@@ -1,0 +1,17 @@
+version: 2
+updates:
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    assignees:
+      - smetanink
+    schedule:
+      interval: 'monthly'
+
+  # Maintain dependencies for npm
+  - package-ecosystem: 'npm'
+    directory: '/'
+    assignees:
+      - smetanink
+    schedule:
+      interval: 'monthly'
