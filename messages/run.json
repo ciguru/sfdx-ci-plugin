@@ -1,0 +1,15 @@
+{
+  "commandDescription": "execute CI actions according configuration file.",
+  "configurationFileDescription": "path to configuration file",
+  "noPromptDescription": "suppress STDIN to get user input (useful for CI tools)",
+  "examples": [
+    "Base command:",
+    "sfdx ci:run --configurationfile ./ci/configuration.yml",
+    "",
+    "Provide input as command arguments (will be used as defaults for STDIN queries):",
+    "sfdx ci:run --configurationfile ./ci/configuration.yml input1=foo input2=bar",
+    "",
+    "Provide input as command arguments:",
+    "sfdx ci:run --configurationfile ./ci/configuration.yml --noprompt input1=foo input2=bar"
+  ]
+}
