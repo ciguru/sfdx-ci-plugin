@@ -16,7 +16,7 @@ v7.142.1 or later.
 ## Install package
 
 ```shell
-> sfdx plugins:install @ciguru/sfdx-ci-engine
+> sfdx plugins:install @ciguru/sfdx-ci-plugin
 ```
 
 # Usage
