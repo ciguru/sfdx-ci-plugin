@@ -1,6 +1,6 @@
 {
   "name": "@ciguru/sfdx-ci-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Plugin for SFDX CLI with CI Engine functionality to automate the Salesforce CRM development process.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -47,7 +47,7 @@
     "@oclif/plugin-help": "5.1.12",
     "@salesforce/command": "5.0.0",
     "@salesforce/core": "2.35.3",
-    "@ciguru/sfdx-ci-engine": "1.0.0"
+    "@ciguru/sfdx-ci-engine": "1.0.2"
   },
   "oclif": {
     "commands": "dist/commands",
