@@ -45,27 +45,16 @@ export class Run extends SfdxCommand {
   public async run(): Promise<any> {
     // Init CI Engine
     const ci = new CiEngine(this.flags.configurationfile);
-    if (!this.flags.json) {
-      this.registerListeners(ci);
-    }
+    this.registerListeners(ci);
     const config: SchemaV1 = await ci.loadSettings();
 
     // Set inputs
     await this.getInputs(config);
     ci.setGlobalInputs(this.input);
 
-    // Run CI Engine
-    try {
-      await ci.run();
-      if (this.flags.json) {
-        this.ux.styledJSON(ci.getOutputs());
-      }
-    } catch (e) {
-      if (this.flags.json) {
-        this.ux.styledJSON(ci.getOutputs());
-      }
-      throw e;
-    }
+    // Execute
+    await ci.run();
+    return ci.getOutputs();
   }
 
   protected registerListeners(ci: CiEngine): void {
