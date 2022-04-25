@@ -10,7 +10,9 @@ import { flags, SfdxCommand } from '@salesforce/command';
 import { Messages, SfdxError } from '@salesforce/core';
 
 import CiEngine from '@ciguru/sfdx-ci-engine';
-import { JSONSchemaForCTSoftwareSFDXCIConfiguration as SchemaV1 } from '@ciguru/sfdx-ci-engine/dist/lib/schema-v1.0.0';
+import { JSONSchemaForCTSoftwareSFDXCIConfiguration as SchemaV100 } from '@ciguru/sfdx-ci-engine/dist/lib/schema-v1.0.0';
+import { JSONSchemaForCTSoftwareSFDXCIConfiguration as SchemaV1 } from '@ciguru/sfdx-ci-engine/dist/lib/schema-v1';
+type Schema = SchemaV100 | SchemaV1;
 
 // Initialize Messages
 Messages.importMessagesDirectory(__dirname);
@@ -46,7 +48,7 @@ export class Run extends SfdxCommand {
     // Init CI Engine
     const ci = new CiEngine(this.flags.configurationfile);
     this.registerListeners(ci);
-    const config: SchemaV1 = await ci.loadSettings();
+    const config: Schema = await ci.loadSettings();
 
     // Set inputs
     await this.getInputs(config);
@@ -76,7 +78,7 @@ export class Run extends SfdxCommand {
     });
   }
 
-  protected async getInputs(config: SchemaV1): Promise<void> {
+  protected async getInputs(config: Schema): Promise<void> {
     if (config.inputs && config.inputs.length > 0) {
       for (const input of config.inputs) {
         let value: string | undefined;
