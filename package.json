@@ -46,7 +46,7 @@
     "@oclif/core": "1.7.0",
     "@oclif/plugin-help": "5.1.12",
     "@salesforce/command": "5.0.5",
-    "@salesforce/core": "2.36.3",
+    "@salesforce/core": "3.30.9",
     "@ciguru/sfdx-ci-engine": "1.2.0"
   },
   "oclif": {
